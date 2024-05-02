@@ -1,7 +1,7 @@
 #!/bin/sh
 # kos-ports ##version##
 #
-# utils/clean-all.mk
+# utils/clean-all.sh
 # Copyright (C) 2015 Lawrence Sebald
 #
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # kos-ports ##version##
 #
-# scripts/calc_dist.py
+# utils/calc_dist.py
 # Copyright (C) 2015 Lawrence Sebald
 #
 

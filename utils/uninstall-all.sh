@@ -1,7 +1,7 @@
 #!/bin/sh
 # kos-ports ##version##
 #
-# scripts/uninstall-all.mk
+# utils/uninstall-all.sh
 # Copyright (C) 2015 Lawrence Sebald
 #
 
