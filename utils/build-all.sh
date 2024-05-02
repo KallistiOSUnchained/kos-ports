@@ -6,6 +6,7 @@
 #
 
 cd ${KOS_PORTS}
+errors=""
 
 for _dir in ${KOS_PORTS}/* ; do
     if [ -d "${_dir}" ] ; then
@@ -19,8 +20,8 @@ for _dir in ${KOS_PORTS}/* ; do
                 rv=$?
                 echo $rv
                 if [ "$rv" -ne 0 ] ; then
-                    echo "Error building ${_dir}. Bailing out."
-                    exit 1
+                    echo "Error building ${_dir}."
+                    errors="${errors}${_dir}: Build failed with return code ${rv}\n"
                 fi
             else
                 echo "${_dir} is already installed and up-to-date. Skipping."
@@ -28,3 +29,7 @@ for _dir in ${KOS_PORTS}/* ; do
         fi
     fi
 done
+
+if [ -n "$errors" ]; then
+    echo "\n\nErrors occurred during the build process:\n$errors"
+fi
