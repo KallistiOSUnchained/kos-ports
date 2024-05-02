@@ -1,7 +1,7 @@
 #!/bin/sh
 # kos-ports ##version##
 #
-# utils/build-all.mk
+# utils/build-all.sh
 # Copyright (C) 2015 Lawrence Sebald
 # Copyright (C) 2024 Andy Barajas
 #
