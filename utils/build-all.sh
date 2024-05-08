@@ -34,7 +34,7 @@ for _dir in ${KOS_PORTS}/* ; do
 done
 
 if [ -n "$errors" ]; then
-    echo "\n------------------------------------------"
+    echo "\n-------------------------------------------------"
     echo "$error_count Error(s) occurred during the build process:"
     echo "$errors"
 fi
