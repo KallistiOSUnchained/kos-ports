@@ -10,7 +10,7 @@ NOCOPY_TARGET =     1
 
 # What files we need to download, and where from.
 GIT_REPOSITORY =    https://github.com/raylib4Consoles/raylib
-GIT_BRANCH =        dreamcast
+GIT_BRANCH =        raylib4Consoles
 
 TARGET =            libraylib.a
 HDRS =              raylib.h raymath.h rlgl.h
