@@ -1,6 +1,6 @@
 # Port Metadata
 PORTNAME =          raylib4dc
-PORTVERSION =       5.0.0
+PORTVERSION =       5.5.0
 
 MAINTAINER =        Andress Barajas
 LICENSE =           zlib License - http://opensource.org/licenses/Zlib
