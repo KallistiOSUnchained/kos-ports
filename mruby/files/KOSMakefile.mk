@@ -68,3 +68,6 @@ fixincludes:
 	@for _file in $(MRUBY_INCLUDE_DIR)/*.h; do \
 		sed -i -e 's/#include <mruby\/mruby\/mrbconf.h>/#include <mruby\/mrbconf.h>/g' $$_file $(SED_FLAGS); \
 	done
+	@for _file in $(MRUBY_INCLUDE_MRUBY_DIR)/*.h; do \
+		sed -i -e 's/#include <mruby\/mruby\/mruby\/mempool.h>/#include <mruby\/mruby\/mempool.h>/g' $$_file $(SED_FLAGS); \
+	done
