@@ -10,8 +10,7 @@ SHORT_DESC =        Library for decoding and streaming MP3 audio
 DEPENDENCIES =
 
 # What files we need to download, and where from.
-GIT_REPOSITORIES =  git://git.code.sf.net/p/cadcdev/libmp3 \
-                    https://github.com/KallistiOS/libmp3.git
+GIT_REPOSITORIES =  https://github.com/KallistiOSUnchained/libmp3.git
 
 TARGET =            libmp3.a
 INSTALLED_HDRS =    include/sndmp3.h include/sndserver.h
