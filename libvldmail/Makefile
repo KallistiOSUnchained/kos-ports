@@ -6,7 +6,7 @@ MAINTAINER =        Donald Haase
 LICENSE =           MIT-0
 SHORT_DESC =        An e-mail address validation library.
 
-# This port uses the autotools scripts that are included with the distfiles.
+# This port uses CMake.
 PORT_BUILD =        cmake
 
 # What files we need to download, and where from.

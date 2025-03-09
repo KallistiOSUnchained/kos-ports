@@ -20,24 +20,25 @@ TARGET =            libzip.a
 
 # Set cmake options
 CMAKE_ARGS =        -Wno-dev -DCMAKE_INSTALL_PREFIX=../../inst \
-        -DCMAKE_C_FLAGS="-I{$KOS_PORTS}/include/zlib" \
-        -DZLIB_INCLUDE_DIR="${KOS_PORTS}/include/zlib"
+                    -DCMAKE_C_FLAGS="-I{$KOS_PORTS}/include/zlib" \
+                    -DZLIB_INCLUDE_DIR="${KOS_PORTS}/include/zlib"
 
-MAKE_TARGET = zip
+MAKE_TARGET =       zip
 
 # Adjust the source code
-PREBUILD = libzip_prebuild
+PREBUILD =          libzip_prebuild
+
+# Add a pre-install target to get the built library where we expect it.
+# Copy the header files manually
+PREINSTALL =        libzip_preinstall
+
+include ${KOS_PORTS}/scripts/kos-ports.mk
 libzip_prebuild:
 	cd "build/${PORTNAME}-${PORTVERSION}" && \
 	patch -p1 < ../../files/${PORTNAME}-${PORTVERSION}.patch || { exit 1; }
 
-# Add a pre-install target to get the built library where we expect it.
-# Copy the header files manually
-PREINSTALL = libzip_preinstall
 libzip_preinstall:
 	cp "build/${PORTNAME}-${PORTVERSION}/lib/libzip.a" "build/${PORTNAME}-${PORTVERSION}"
 	mkdir -p inst/include
 	cp "build/${PORTNAME}-${PORTVERSION}/lib/zip.h" inst/include
 	cp "build/${PORTNAME}-${PORTVERSION}/zipconf.h" inst/include
-
-include ${KOS_PORTS}/scripts/kos-ports.mk
